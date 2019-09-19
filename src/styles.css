@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+h1 {
+  text-align: center;
+}
+
+div {
+  width: 25%;
+  margin: auto;
+}
+
+button {
+  margin: 2px;
+  width: auto;
+}
+
+p, input{
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
