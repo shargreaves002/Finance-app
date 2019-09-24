@@ -8,6 +8,7 @@ import { CostSplitterComponent } from './cost-splitter/cost-splitter.component';
 import { InvestmentCalcComponent } from './investment-calc/investment-calc.component';
 import { LoanCalcComponent } from './loan-calc/loan-calc.component';
 import { SavingsCalcComponent } from './savings-calc/savings-calc.component';
+import { MatRadioModule } from '@angular/material'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SavingsCalcComponent } from './savings-calc/savings-calc.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,11 +12,17 @@ export class TipCalcComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClick(amount: number, tip: number) {
-    if (tip < 0 || tip > 100) {
-      this.answer = "Please tip between 0% and 100%.";
+  calculate(amount: number, tip: number) {
+    const formatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 2
+    });
+
+    if (tip < 0) {
+      this.answer = "Please tip a positive percentage";
     } else {
-      this.answer = Math.round((amount * (tip / 100)) * 100) / 100;
+      this.answer = formatter.format(Math.round((amount * (tip / 100)) * 100) / 100);
     }
   }
 

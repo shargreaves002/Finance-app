@@ -2,18 +2,18 @@
   <p>Amount to split:</p>
 
   <label>
-    <input #amount type="number" min="0" max="100000" step=".01"/>
+    <input #amount type="number" min="0" step=".01"/>
   </label>
 
   <br />
   <p>Number of people:</p>
 
   <label>
-    <input #people type="number" min="0" max="100"/>
+    <input #people type="number" min="0"/>
   </label>
   <br />
 
-  <button type="button" (click)="onClick(amount.value, people.value)" style="">Calculate</button>
+  <button type="button" (click)="onClick(amount.value, people.value)">Calculate</button>
   <br />
 
   <p>{{answer}}</p>

@@ -11,7 +11,8 @@ const routes: Routes = [{path:"tip-calc", component: TipCalcComponent},
                         {path: "cost-splitter", component: CostSplitterComponent},
                         {path: "investment-calc", component: InvestmentCalcComponent},
                         {path: "loan-calc", component: LoanCalcComponent},
-                        {path: "savings-calc", component: SavingsCalcComponent}];
+                        {path: "savings-calc", component: SavingsCalcComponent},
+                        {path: "", pathMatch: "full", redirectTo: "tip-calc"}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,21 +1,37 @@
-<div>
-  <p>Total Bill:</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <p>Total Bill:</p>
+  </div>
 
-  <label>
-    <input #amount type="number" min="0" max="100000" step=".01"/>
-  </label>
+  <div class="row justify-content-center">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text">$</div>
+      </div>
+      <input #amount type="number" min="0" class="form-control" placeholder="Total Bill" aria-label="Total Bill" aria-describedby="Total Bill">
+    </div>
+  </div>
 
   <br />
-  <p>Percent to Tip:</p>
-
-  <label>
-    <input #tip type="number" min="0" max="100"/>
-  </label>
+  <div class="row justify-content-center">
+    <p>Percent to Tip:</p>
+  </div>
+  <div class="row justify-content-center">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text">%</div>
+      </div>
+      <input #tip type="number" min="0" class="form-control" placeholder="Tip" aria-label="Tip" aria-describedby="Tip">
+    </div>
+  </div>
   <br />
-
-  <button type="button" (click)="onClick(amount.value, tip.value)" style="">Calculate</button>
-  <br />
-
-  <p>{{answer}}</p>
+  <div class="row justify-content-center">
+    <button class="btn nav-item btn-outline-secondary" type="button" (click)="calculate(amount.value, tip.value)">Calculate</button>
+    <br />
+  </div>
+  <div class="row justify-content-center">
+    <p>{{answer}}</p>
+  </div>
 </div>
 <router-outlet></router-outlet>
+

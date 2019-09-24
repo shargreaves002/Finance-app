@@ -1,2 +1,49 @@
-<p>investment-calc works!</p>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<div>
+  <p>Amount of Time (years):</p>
+  <label>
+    <input id="time" type="number" min="0"/>
+  </label>
+  <br />
+
+  <p>Initial Contribution:</p>
+  <label>
+    <input id="init" type="number" min="0" step=".01"/>
+  </label>
+  <br />
+
+  <p>Monthly Contributions:</p>
+  <label>
+    <input id="periodic" type="number" min="0" step="0.1"/>
+  </label>
+  <br />
+
+  <p>Expected Annual Rate of Return:</p>
+  <label>
+    <input id="interest" type="number" min="0" step="0.1"/>
+  </label>
+  <br />
+
+  <p>Compounding Rate:</p>
+
+
+  <select id="compound" class="center">
+    <option value="year">Yearly</option>
+    <option value="semi">Semi-Annually</option>
+    <option value="quarter">Quarterly</option>
+    <option value="month">Monthly</option>
+    <option value="day">Daily</option>
+  </select>
+  <br />
+  <br />
+
+  <button type="button" class="center" (click)="calculate();">Calculate</button>
+  <br />
+
+  <p>
+    {{answer}}
+  </p>
+
+
+</div>
 <router-outlet></router-outlet>

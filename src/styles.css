@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-h1 {
+/*h1 {
   text-align: center;
+}
+
+hr {
+  width: 80%;
 }
 
 div {
@@ -18,4 +22,9 @@ p, input{
   margin: auto;
   text-align: center;
 }
+
+.radio {
+  display: inline-block;
+  margin: auto;
+}*/
 

@@ -1,2 +1,42 @@
-<p>savings-calc works!</p>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<div>
+  <p>Initial Deposit:</p>
+  <label>
+    <input id="init" type="number" min="0" step=".01"/>
+  </label>
+  <br />
+
+  <p>Monthly deposits:</p>
+  <label>
+    <input id="monthly" type="number" min="0" step="0.1"/>
+  </label>
+  <br />
+
+  <p>Over a period of:</p>
+  <label>
+    <input id="period" type="number" min="0"/>
+  </label>
+
+  <select id="b" class="center">
+    <option value="months">Months</option>
+    <option value="years">Years</option>
+  </select>
+  <br />
+  <br />
+
+  <p>APY:</p>
+  <label>
+    <input id="interest" type="number" min="0"/>
+  </label>
+  <br />
+  <br />
+  <button type="button" class="center" (click)="calculate();">Calculate</button>
+  <br />
+
+  <p>
+    {{answer}}
+  </p>
+
+
+</div>
 <router-outlet></router-outlet>
